@@ -22,7 +22,7 @@ const longestPalindrome = function (s) {
 
 const expandFromCenter = function (str, left, right) {
   let i = 0;
-  while (str[left[i]] && str[left[i]] === str[right[i]]) {
+  while (str[left[i]] && str[left - i] === str[right + i]) {
     i++;
   }
   i--;
