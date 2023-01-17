@@ -6,3 +6,31 @@ outputted. For example: if str is "cab", "ca" can be reduced to "b" and you get
 "bb" (you can also reduce it to "cc"). The reduction is done so the output should 
 be 2. If str is "bcab", "bc" reduces to "a", so you have "aab", then "ab" reduces 
 to "c", and the final string "ac" is reduced to "b" so the output should be 1. */
+
+var frequencySort = function (nums) {
+  let map = {};
+
+  for (let i = 0; i < nums.length; i++) {
+    if (map[nums[i]] === undefined) {
+      map[nums[i]] = 1;
+    } else {
+      map[nums[i]]++;
+    }
+  }
+  //   console.log(map);
+  return nums.sort((a, b) => {
+    if (map[a] === map[b]) {
+      return b - a;
+    }
+    //   console.log(map[nums[a]], map[nums[a]]);
+
+    return map[a] - map[b];
+  });
+
+  //   return nums.sort((a, b) => map[a] - map[b] || b - a);
+};
+
+// arr = [1, 1, 2, 2, 2, 3];
+// arr.sort((a, b) => a - b);
+// console.log(arr);
+console.log(frequencySort([1, 1, 2, 2, 2, 3]));
