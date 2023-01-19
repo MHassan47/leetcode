@@ -6,6 +6,18 @@
  * Negative numbers may be entered as parameters and no array will have less than 2 elements.
  */
 
+const Consecutive = (arr) => {
+  arr.sort((a, b) => a - b);
+  let solution = 0;
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] + 1 !== arr[i + 1]) {
+      solution++;
+    }
+  }
+  return solution;
+};
+
 // - sort the Array
 // - counter
 // - loop through Array
