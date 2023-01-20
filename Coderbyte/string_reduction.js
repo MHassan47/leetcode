@@ -22,12 +22,12 @@ var frequencySort = function (nums) {
     if (map[a] === map[b]) {
       return b - a;
     }
-    //   console.log(map[nums[a]], map[nums[a]]);
+  
 
     return map[a] - map[b];
   });
 
-  //   return nums.sort((a, b) => map[a] - map[b] || b - a);
+  
 };
 
 // arr = [1, 1, 2, 2, 2, 3];
