@@ -26,7 +26,8 @@ const stockPicker = (array) => {
     let possible = array[right] - array[left];
     profit = Math.max(profit, possible);
   }
+  if (profit <= 0) return -1;
   return profit;
 };
 
-console.log(stockPicker([10, 19, 4, 1, 5]));
+console.log(stockPicker([10, 9, 4, 1]));
