@@ -18,11 +18,13 @@ const coinDeterminer = (num) => {
   const coins = [1, 5, 7, 9, 11];
   let leastNumber = 0;
   let currentNumber = 0;
+  let 
   for (let i = 0; i < coins.length; i++) {
     let currentCount = 0;
     currentCount += coins[i];
-    if (currentCount !== num) {
+    if (currentCount < num) {
       currentNumber++;
+    
     }
     leastNumber = Math.max(leastNumber, currentNumber);
   }
