@@ -9,7 +9,7 @@ const maxArea = function (height) {
     i = 0,
     j = height.length - 1;
   while (i < j) {
-    const possibleMax = (j - 1) * Math.min(height[i], height[j]);
+    const possibleMax = (j - i) * Math.min(height[i], height[j]);
     area = Math.max(area, possibleMax);
     if (height[i] > height[j]) {
       j--;
