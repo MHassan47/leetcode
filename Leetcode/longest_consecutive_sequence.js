@@ -23,24 +23,40 @@
 //   return longestStreak;
 // };
 
+// Time Complexity of O(n) solution
 var longestConsecutive = function (nums) {
-    let longestStreak = 1;
-    let currentStreak = 1;
-    nums.sort((a, b) => a - b);
-    nums = [...new Set(nums)];
-   if(nums.length < 1) {
-          return 0
-        }
-    for (let i = 0; i < nums.length; i++) {
-       
-      if (nums[i - 1] + 1 === nums[i]) {
-        currentStreak++;
-      } else {
-        currentStreak = 1;
+  let set = new Set(nums);
+  let longest = 0;
+  console.log(set);
+  for (let num of [...set]) {
+    if (!set.has(num - 1)) {
+      let streak = 1;
+      while (set.has(num + streak)) {
+        streak++;
       }
-      longestStreak = Math.max(longestStreak, currentStreak);
-    
+      longest = Math.max(longest, streak);
     }
-    return longestStreak;
-  };
+  }
+  return longest;
+};
+
+// Time Complexity of (nlogn) solution
+var longestConsecutive = function (nums) {
+  let longestStreak = 1;
+  let currentStreak = 1;
+  nums.sort((a, b) => a - b);
+  nums = [...new Set(nums)];
+  if (nums.length < 1) {
+    return 0;
+  }
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i - 1] + 1 === nums[i]) {
+      currentStreak++;
+    } else {
+      currentStreak = 1;
+    }
+    longestStreak = Math.max(longestStreak, currentStreak);
+  }
+  return longestStreak;
+};
 console.log(longestConsecutive([9, 1, 4, 7, 3, -1, 0, 5, 8, -1, 6]));
