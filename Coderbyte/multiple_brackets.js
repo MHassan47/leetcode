@@ -21,3 +21,5 @@ const multipleBrackets = (str) => {
 };
 
 console.log(multipleBrackets("(hello [world])(!)"));
+
+console.log(!"");
