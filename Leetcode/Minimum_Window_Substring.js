@@ -50,6 +50,5 @@ var minWindow = function (s, t) {
 
   return res;
 };
-console.log("here");
 
 console.log(minWindow("ADOBECODEBANC", "ABC"));
