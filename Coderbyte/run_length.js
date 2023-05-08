@@ -3,6 +3,35 @@
 # and outputting that number along with a single character of the repeating sequence. For example: "wwwggopp" would
 # return 3w2g1o2p. The string will not contain any numbers, punctuation, or symbols. */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // - hashmap
 // - loop all the elements
 // - variable that holds the altered string
