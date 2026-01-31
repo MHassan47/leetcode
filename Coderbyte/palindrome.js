@@ -20,3 +20,7 @@ var palindrome = function (s) {
   return true;
 };
 console.log(palindrome("race car"));
+console.log(palindrome("anna"));
+console.log(palindrome("anna"));
+console.log(palindrome("anna"));
+
